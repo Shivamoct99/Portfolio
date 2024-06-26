@@ -14,10 +14,12 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  console.log(isDarkMode);
   return (
-    <ThemeProvider theme={darkTheme}>
-      {/* <ThemeProvider theme={lightTheme}> */}
-      <Navbar />
+    // <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Body>
         <HeroSection />
         <Wrapper>

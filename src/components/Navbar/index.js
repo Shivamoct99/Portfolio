@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { FaBars } from "react-icons/fa";
 // import { useTheme } from "styled-components";
 import { Bio } from "../../data/constants";
+import DarkModeToggle from "react-dark-mode-toggle";
 
-const Navbar = () => {
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   // const theme = useTheme();
   return (
@@ -17,13 +18,13 @@ const Navbar = () => {
           Sharma
           <Navdiv>{">"}</Navdiv>
         </NavLogo>
-        <MobileIcon>
-          <FaBars
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
+        <DarkMode>
+          <DarkModeToggle
+            onChange={setIsDarkMode}
+            checked={isDarkMode}
+            size={42}
           />
-        </MobileIcon>
+        </DarkMode>
         <NavItems>
           <NavLink href="#">Home</NavLink>
           {/* <NavLink href="#about">About</NavLink> */}
@@ -36,6 +37,13 @@ const Navbar = () => {
         <ButtonContainer>
           <TalkButton>Lets Talk</TalkButton>
         </ButtonContainer>
+        <MobileIcon>
+          <FaBars
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}
+          />
+        </MobileIcon>
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <MobileMenuItems>
@@ -170,7 +178,11 @@ const NavLink = styled.a`
     border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
-
+const DarkMode = styled.div`
+  position: relative;
+  right: 36px;
+  top: 5px;
+`;
 const TalkButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
@@ -230,7 +242,7 @@ const MobileMenu = styled.div`
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  background: ${({ theme }) => theme.card_dark};
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
