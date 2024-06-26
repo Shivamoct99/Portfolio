@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.home {
+  width: 100%;
+  /* height: 100vh;
+     backgroundColor: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+.info {
+  width: 50%;
+  height: 90vh;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info h2 {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.info h2 span {
+  color: rgb(239, 16, 179);
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.info span {
+  color: black;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.info span:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+.info p {
+  width: 80%;
+  color: grey;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+/* @keyframes myAnim {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+} */
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
