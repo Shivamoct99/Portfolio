@@ -9,6 +9,8 @@ export const Bio = {
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Shivamoct99",
+  download:
+    "https://drive.usercontent.google.com/u/0/uc?id=1zpZ-XDfFU17nAQYVaF1NurThs12feV42&export=download",
   resume:
     "https://drive.google.com/file/d/1zpZ-XDfFU17nAQYVaF1NurThs12feV42/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/shivam-sharma-a63b22251/",
@@ -251,8 +253,8 @@ export const projects = [
     date: "May 2024 - present ",
     description:
       "Welcome to our cutting-edge React chat app, designed for seamless and engaging communication. Our platform offers a responsive, user-friendly interface with real-time messaging. Enjoy secure, fast, and efficient communication, built with React, JavaScript, and Tailwind CSS for optimal performance and visual appeal.",
-    // image:
-    //   "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+    image:
+      "https://github.com/Shivamoct99/Chat-APP-UI/assets/107253104/85f36a60-9adf-4dfa-8940-a9e5b15ed60d",
     tags: ["Javascript", "React Js", "Tailwind Css", "Socket.io"],
     category: "web app",
     github: "https://github.com/Shivamoct99//Chat-APP-UI",

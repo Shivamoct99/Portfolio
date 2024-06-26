@@ -11,7 +11,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   return (
     <Nav>
       <NavContainer>
-        <NavLogo>
+        <NavLogo href="#">
           <Navdiv>{"<"}</Navdiv>
           Shivam
           <div style={{ color: "rgb(133, 76, 230)" }}>/</div>
@@ -140,8 +140,14 @@ const NavLogo = styled.a`
   align-items: center;
   font-weight: 500;
   font-size: 18px;
+  cursor: pointer;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
   color: ${({ theme }) => theme.text_primary};
+  &:hover {
+    transform: scale(1.06);
+    transition: all 0.4s ease-in-out;
+  }
   @media (max-width: 640px) {
     padding: 0 0px;
   }

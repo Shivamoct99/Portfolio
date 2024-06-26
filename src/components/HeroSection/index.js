@@ -4,6 +4,7 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroBgAnimation from "../HeroBgAnimation";
 import HeroImg from "../../images/HeroImage.jpeg";
+import DownloadSharpIcon from "@mui/icons-material/DownloadSharp";
 
 const HeroSection = () => {
   return (
@@ -31,9 +32,17 @@ const HeroSection = () => {
               </Span>
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="display">
-              Check Resume
-            </ResumeButton>
+            <Button>
+              <ResumeButton href={Bio.resume} target="display">
+                Check Resume
+              </ResumeButton>
+              <ResumeButton href={Bio.download} target="display">
+                <Downloadspan>
+                  <DownloadSharpIcon sx={{ fontSize: 20 }} />
+                </Downloadspan>
+                Resume
+              </ResumeButton>
+            </Button>
           </HeroLeftContent>
           <HeroRightContent>
             <Img src={HeroImg} alt="hero-image" />
@@ -210,6 +219,12 @@ const SubTitle = styled.div`
     line-height: 32px;
   }
 `;
+const Button = styled.div`
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+`;
 
 const ResumeButton = styled.a`
     -webkit-appearance: button;
@@ -217,7 +232,7 @@ const ResumeButton = styled.a`
     appearance: button;
     text-decoration: none;
     width: 95%;
-    max-width: 300px;
+    max-width: 200px;
     text-align: center;
     padding: 16px 0;
     color:${({ theme }) => theme.white};
@@ -244,5 +259,8 @@ const ResumeButton = styled.a`
         padding: 12px 0;
         font-size: 18px;
     } 
-
+`;
+const Downloadspan = styled.span`
+  position: relative;
+  top: 4px;
 `;

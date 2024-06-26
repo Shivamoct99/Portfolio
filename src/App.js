@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  const [isDarkMode, setIsDarkMode] = useState(() => false);
+  const [isDarkMode, setIsDarkMode] = useState(() => true);
   console.log(isDarkMode);
   return (
     // <ThemeProvider theme={darkTheme}>
